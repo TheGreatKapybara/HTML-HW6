@@ -202,8 +202,6 @@ u {
   font-weight: 400;
 }
 
-
-
 .catalog_item {
   background: #f8f8f8;
 }
@@ -240,7 +238,7 @@ u {
   opacity: 0%;
 }
 
-.buy_hover:hover{
+.buy_hover:hover {
   opacity: 100%;
 }
 
@@ -275,6 +273,176 @@ u {
   line-height: 19px;
   color: #f26376;
   cursor: pointer;
+  transition: 1s;
+}
+
+.catalog_btn:hover {
+  background-color: #ff6a6a;
+  color: #ffffff;
+}
+
+.proffits_background {
+  background: #222224;
+}
+
+.proffits {
+  padding: 104px 0;
+  display: flex;
+  gap: 30px;
+}
+
+.proffit {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13.972px;
+  line-height: 17px;
+  text-align: center;
+  color: #fbfbfb;
+}
+
+.proffit h5 {
+  margin-top: 19px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 19.96px;
+  line-height: 24px;
+}
+
+.proffit_icon {
+  width: 40px;
+  height: 40px;
+}
+
+.subscribe_background {
+  background-image: url(/img/subscribe_background_mask.png),
+    url(/img/subscribe_background.png);
+}
+
+.subscribe {
+  display: flex;
+}
+
+.subscribe_quote {
+  max-width: 360px;
+  padding-top: 97px;
+  padding-bottom: 154px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #222224;
+}
+
+.subscribe_photo {
+  width: 96px;
+  height: 96px;
+}
+
+.subscribe_form {
+  margin-left: 223px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 167.2%;
+  color: #222224;
+}
+
+.subscribe_form h5 {
+  font-weight: 400;
+}
+
+.subscribe_form_position {
+  position: relative;
+}
+
+.subscribe_form input {
+  left: 0;
+  width: 322px;
+  height: 49px;
+  background: #e1e1e1;
+  border: none;
+  border-radius: 22px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222224;
+  opacity: 0.67;
+  padding-left: 22px;
+}
+
+.subscribe_form input:focus {
+  outline: none;
+}
+
+.subscribe_form button {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 49px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  border: none;
+  background-color: #e05c6e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.footer_background {
+  background: #222224;
+}
+
+.footer {
+  min-height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fbfbfb;
+}
+
+.footer_links {
+  display: flex;
+  gap: 7.29px;
+}
+
+.footer_link {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.footer_link:hover {
+  background: #f16d7f;
+}
+
+.footer_link:hover path {
+  fill: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -305,14 +473,40 @@ u {
   .catalog_items {
     gap: 16px;
   }
-}
 
+  .proffits {
+    flex-direction: column;
+    align-items: center;
+  }
+  .proffit {
+    width: 360px;
+  }
+
+  .subscribe_background {
+    background-image: url(/img/subscribe_background_mask_tablet.png),
+      url(/img/subscribe_background_tablet.png);
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe_quote {
+    padding-bottom: 128px;
+  }
+
+  .subscribe_form {
+    margin-left: 0;
+    margin-bottom: 140px;
+  }
+}
 
 @media (max-width: 435px) {
   nav {
     padding: 25px 16px;
   }
-  
+
   .header_profile {
     display: none;
   }
@@ -333,17 +527,15 @@ u {
   }
 
   .welcome_content h1 {
-    
     font-size: 38px;
     line-height: 45.6px;
-    
   }
-  
+
   .welcome_content p {
     font-size: 20px;
     line-height: 24px;
   }
-  
+
   .line {
     width: 12px;
     height: 61px;
@@ -354,7 +546,6 @@ u {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    
   }
 
   .promo_text {
@@ -368,11 +559,31 @@ u {
   .mobile {
     display: block;
   }
+
+  .footer {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    padding-bottom: 9px;
+  }
+
+  .footer_links {
+    padding: 40px 0;
+  }
 }
 
 @media (max-width: 375px) {
   .catalog_items {
     display: flex;
     flex-direction: column;
+  }
+
+  .subscribe_form {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .subscribe_form h5 {
+    font-size: 14px;
+    margin-bottom: 22px;
   }
 }
