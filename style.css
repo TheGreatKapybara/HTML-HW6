@@ -17,7 +17,8 @@ body {
   font-family: "lato";
 }
 
-header {
+.header {
+  position: relative;
   min-height: 75px;
   background: #222222;
 }
@@ -49,9 +50,50 @@ nav {
 
 .header_right {
   display: flex;
+  align-items: center;
   gap: 33px;
   padding-top: 8px;
   padding-bottom: 2px;
+}
+
+.header_menu:hover .nav-menu-list {
+  display: block;
+}
+
+.nav-menu-list {
+  display: none;
+  position: absolute;
+  top: 76px;
+  background: #ffffff;
+  padding: 32px;
+  padding-right: 74px;
+  z-index: 10;
+}
+
+.nav-menu-list h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.nav-menu-list h6 {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f16d7f;
+}
+
+.nav-menu-list li {
+  list-style-type: none;
+  padding-left: 21.5px;
+  padding-bottom: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6f6e6e;
 }
 
 .welcome_backgrond {
@@ -64,6 +106,7 @@ nav {
 }
 
 .welcome {
+  
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 63px;
@@ -317,9 +360,12 @@ u {
   height: 40px;
 }
 
-.subscribe_background {
-  background-image: url(/img/subscribe_background_mask.png),
-    url(/img/subscribe_background.png);
+.subscribe_background_img {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  z-index: -5;
+  overflow: hidden;
 }
 
 .subscribe {
@@ -513,6 +559,11 @@ u {
 
   .header_basket {
     display: none;
+  }
+
+  .nav-menu-list {
+    top: 88px;
+    right: 0;
   }
 
   .welcome {
