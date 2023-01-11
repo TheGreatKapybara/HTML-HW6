@@ -56,10 +56,6 @@ nav {
   padding-bottom: 2px;
 }
 
-.header_menu:hover .nav-menu-list {
-  display: block;
-}
-
 .nav-menu-list {
   display: none;
   position: absolute;
